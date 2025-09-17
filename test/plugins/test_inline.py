@@ -13,11 +13,13 @@
 # included in all copies or substantial portions of the Software.
 
 from beets import config, plugins
-from beets.test.helper import PluginTestCase
+from beets.test.helper import PluginUnitTestCase
 from beetsplug.inline import InlinePlugin
 
 
-class TestInlineRecursion(PluginTestCase):
+class TestInlineRecursion(PluginUnitTestCase):
+    plugin = "inline"
+
     def test_no_recursion_when_inline_shadows_fixed_field(self):
         config["plugins"] = ["inline"]
 

@@ -26,7 +26,7 @@ from confuse import ConfigError
 
 from beets import config, plugins, ui
 from beets.test import _common
-from beets.test.helper import BeetsTestCase, IOMixin, PluginTestCase
+from beets.test.helper import BeetsTestCase, IOMixin, PluginUnitTestCase
 from beets.ui import commands
 from beets.util import syspath
 
@@ -67,7 +67,7 @@ class PrintTest(IOMixin, unittest.TestCase):
 
 
 @_common.slow_test()
-class TestPluginTestCase(PluginTestCase):
+class TestPluginTestCase(PluginUnitTestCase):
     plugin = "test"
 
     def setUp(self):

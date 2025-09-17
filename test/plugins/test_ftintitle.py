@@ -19,11 +19,11 @@ from collections.abc import Generator
 import pytest
 
 from beets.library.models import Album, Item
-from beets.test.helper import PluginTestCase
+from beets.test.helper import PluginUnitTestCase
 from beetsplug import ftintitle
 
 
-class FtInTitlePluginFunctional(PluginTestCase):
+class FtInTitlePluginFunctional(PluginUnitTestCase):
     plugin = "ftintitle"
 
 
